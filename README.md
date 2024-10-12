@@ -4,6 +4,24 @@ A Spring Boot application designed to manage educational courses, assignments, s
 # Overview
 This Course Management System is a Spring Boot application designed to facilitate the management of educational courses, assignments, students, and teachers. 
 
+# Setting up database
+- This project uses MySQL as a database. To set it up, you need to install MySQL and create a database called course_management ( or change the name inside application.properties )
+- Make sure password, username, database name and port are correct inside application.properties file.
+
+# Running the Project
+- Configuration: Check src/main/resources for application properties. Adjust the database URL, username, and password as per your MySQL setup.
+- Database Setup: Install MySQL and make a database. Then change inside application.settings the username, password and databse accordingly.
+
+# Project structure
+- src/main/java/net.coursemanagement.course_app is the base path for the project. Inside this path there are:
+  * /controller: Contains all the controllers for handling incoming requests and managing the application flow.
+  * /dto: Holds Data Transfer Objects (DTOs) that facilitate communication between the application and external data sources, such as the database and cookies.
+  * /entity: Contains the entity classes that represent the database tables and define the structure of the data being managed.
+  * /mapper: Includes mapping classes that convert between entity objects and DTOs, simplifying data transfer and ensuring a clean separation of data layers.
+  * /repository: Holds repository interfaces for data access, providing CRUD operations for the entities.
+  * /service: Contains service classes that encapsulate business logic and interact with both the repository and the controller layers.
+
+
 # Features
 - **User Management:** Supports user roles for students and teachers, enabling personalized access to course materials.
 - **Course Management:** Create, update, and delete courses along with descriptions and assigned teachers.
